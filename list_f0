@@ -1,0 +1,13 @@
+ResidFile = 'resid2.tmp'    ; Fit to F0 only!
+Resids = ReadResids(ResidFile, period = Period, /word32)
+TimeRange = [52697.48903,52785.3992]
+
+IntLen = 512 / 86400d
+HalfMaxPeriod = 10
+MinFilterLevel = 0.02
+YRange = [-1, 1]
+
+nDegree = 1
+nTrials = 10000
+ShowSpectra = 0
+.run residsmontecarlo
